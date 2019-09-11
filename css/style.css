@@ -1,0 +1,384 @@
+/*** basic styling ***/
+*{
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #2f2e2e;
+}
+/***  banner Background ***/
+.index-banner {
+    width: 100%;
+    height: 100vh;
+    background-color:#f9db79;
+}
+.main-text{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.imgg{
+    position: absolute;
+    height: 70vh;
+    width: 100%;
+    text-align: center;
+    /* padding-top: 70px; */
+    bottom: 0;
+}
+.main-text h1 {
+    font-weight: bolder;
+    font-size: 90px;
+   letter-spacing: 3px;
+   color: #fff;
+}
+.main-text h2{
+    color: #fff;
+}
+ @media(max-width: 768px) {
+    .main-text h1 {
+          font-size: 30px ;
+          text-align: center;
+    }
+    .main-text h2 {
+        font-size: 20px ;
+        text-align: center;
+  }
+}
+/***  navigation ***/
+header{
+    width: 100%;
+    height: 70px;
+    background-color:#f9db79;
+    position: absolute;
+}
+header #brand{
+    float: left;
+    display: block;
+    margin-left: 80px;
+    line-height: 80px;
+    font-weight: lighter;
+}
+header #brand a{
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+    font-family: 'Cookie', cursive;
+}
+/* header nav #menu{
+    float: left;
+    right: 80px;
+} */
+header nav #menu li{
+    padding-left: 40px;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 80px;
+    transition: all 0.3s ease-out;
+}
+header nav #menu li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: lighter;
+    text-decoration: none;
+}
+#toggle{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-weight: 500;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    float:right;
+    transition: all 0.3s ease-out;
+    visibility: hidden;
+    opacity: 0;
+    color: white;
+}
+.span{
+    color: #fff;
+}
+.close-btn{
+    position: absolute;
+    right: 30px;
+    font-weight: 500;
+    z-index: 2;
+    cursor: pointer;
+    top:-2px;
+    line-height: 80px;
+    color: white;
+}
+#resize {
+    z-index: 1;
+    top: 0px;
+    position: fixed;
+    background: #f9db79;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+#resize #menu {
+    height: 90px;
+    position: absolute;
+    left:45%;
+    transform: translateX(-40%);
+    text-align: center;
+    display: table-cell;
+    vertical-align: center;
+}
+#resize #menu li{
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 50px;
+    min-height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+#resize li:nth-child(1) {
+    margin-top: 140px;
+}
+#resize #menu li a {
+    color: #fff;
+}
+#resize #menu li a:hover {
+    text-decoration: none;
+}
+#resize.active {
+    visibility: visible;
+    opacity: 1;
+}   
+@media (max-width:768px){
+    #toggle{
+        visibility: visible;
+        opacity: 1;
+        margin-top: 6px;
+        margin-right: 4px;
+    }
+    header #brand{
+        margin-left: 24px;
+    }
+    #menu a{
+        font-size: 20px;
+        font-weight: 300;
+    }
+    header #menu {
+        display: none;
+  }
+}
+@media(min-width:768px){
+    #resize{
+        visibility: hidden;
+    }
+}
+
+/***  frist intro Section ***/
+.photo{
+    position: relative;
+    height: 340px;
+    background: url(../img/brendan.jpg) no-repeat 50% 0%;
+    background-size: cover;
+}
+.intro {
+    text-align: center;
+    line-height: 36px;
+    margin-top: 40px;
+}
+.intro h2{
+    font-family: 'Cookie', cursive;
+    margin-bottom: 20px
+}
+.intro h1{
+    font-size: 30px;
+}
+@media (max-width:768px){
+    .intro{
+        font-size: 15px;
+    }
+    .intro h1{
+        font-size: 20px;
+    }
+    .intro h2{
+        font-size: 25px;
+    }
+}
+/***  flavor title Section ***/
+.title h1{
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+}
+@media (max-width:768px){
+    .title h1{
+        font-size: 30px;
+    }
+}
+.line{
+    width: 200px;
+    height: 3px;
+    background-color: black;
+    margin: 0 auto;
+}
+/***  flavor img Section ***/
+.cards , .imgbx{
+width: 100%;
+}
+.container .cards h2{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-bottom: solid black;
+}
+.container .cards p{
+    text-align: center;
+}
+
+/***  break img Section ***/
+.parallax-slide {
+    height: 100vh;
+  }
+  #parallax1 {
+    background: url('../img/brooke-.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+.break{
+    background-repeat: no-repeat;
+    width: 100%;
+    text-align: center;
+}
+.break h3{
+    font-size: 2em;
+    font-weight: 500;
+    color:violet;
+    background-color:#ffbfb3;
+    padding: 40px 0;
+}
+.break h3 span{
+    animation: animate 1s linear infinite;
+}
+ .break h3 span:nth-child(1)
+{
+    animation-delay: 0s;
+}
+.break h3 span:nth-child(2)
+{
+    animation-delay: 0.2s;
+}
+.break h3 span:nth-child(3)
+{
+    animation-delay: 0.4s;
+}
+
+.break h3 span:nth-child(4)
+{
+    animation-delay: 0.6s;
+}
+.break h3 span:nth-child(5)
+{
+    animation-delay: 0.8s;
+}
+.break h3 span:nth-child(6)
+{
+    animation-delay: 0.10s;
+}
+.break h3 span:nth-child(7)
+{
+    animation-delay: 0.12s;
+}
+@keyframes animate
+{
+    0%
+    {
+        color:red;
+        text-shadow: none;
+    }
+    100%
+    {
+        color: pink;
+        text-shadow: 0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 40px #fff,
+                    0 0 80px #fff,
+                    0 0 12px #fff,
+                    0 0 160px #fff; 
+    }
+}
+
+/***  about  Section ***/
+.hanna {
+    position: relative;
+    height: 340px;
+    background: url(../img/hanna.webp) no-repeat 50% 50%;
+    background-size: cover;
+}
+.about{
+    text-align: center;
+    line-height: 36px;
+}
+.about h1{
+    font-size: 30px;
+}
+.about h2{
+    font-family: 'Cookie', cursive;
+    margin-bottom: 20px
+}
+@media (max-width:768px){
+    .about{
+        font-size: 15px;
+    }
+    .about h1{
+        font-size: 20px;
+    }
+    .about h2{
+        font-size: 25px;
+    }
+}
+
+/***  footer ***/
+.footer {
+    background:#f9db79;
+    width: 100%;
+}
+#hours, #location, #media {
+    text-align: center ;
+}
+.footer .container {
+    padding: 100px 0;
+}
+.footer h4{
+    font-size: 24px ;
+    line-height: 70px;
+    margin-bottom: 30px;
+}
+.footer p {
+    font-size: 24px ;
+    color: #fff;
+}
+#bottom{
+    color: gray;
+}
+@media(max-width: 900px) {
+    .footer .container {
+          width: 92% !important;
+    }
+    .footer h4{
+        font-size: 20px;
+    }
+    .footer p {
+        font-size: 18px ;
+    }
+}
